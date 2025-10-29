@@ -3,11 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <script type="index" src="scripts/index.js"></script>
     <title>Document</title>
 </head>
 <body>
+
+    <header>
+        <h1>
+            WDD 131: Dinamic Web Fundamentals - <span> Dreiser J. Morales </span>
+        </h1>
+    </header>
+
+    <nav>
+        <ul> <li>  <a href="www.linkedin.com/in/dreiser-morales-645788263"> LinkedIn </a> </li> 
+            <li> <a href="#"> Canvas </a> </li>
+            <li> <a href="#"> Scriptures </a> </li>
+            <li> <a href="#"> Final Project </a> </li>
+        </ul>
+    </nav>
+
     <section>
-        <h1> hi world </h1>
+        <div id="right_div">
+            <h1 class="div_header"> About Me </h1>
+
+            <div id="about_me">
+                <div>
+                    <p class="description">
+                        My name is Dreiser, I was born in Venezuela but I moved to Colombia 
+                        almost 10 years ago, I live alone but soon I will marriage. i currently 
+                        work as Paralegal Assistant at Betzold LawM, I'm studiying software 
+                        developement in BYU Idaho University, I do not have children, I like to
+                        play soccer and Pokemon Online on my phone. My faforite color is Black
+                        I love Sushi, and traveling, simple things matter.
+                    </p>
+
+                    <h1 id="description_header"> Cucuta Colombia </h1>
+
+                    <div class="description">
+                        <div id="flag_div">
+                            <img id="flag_img" src="images/colombia_flag.png" alt="">
+                            <details>Oficial Flag of Colombia</details>
+                        </div>
+
+                        <p>
+                            Colombia is a vibrant South American country known for its rich culture, 
+                            stunning landscapes, and friendly people. Famous for its coffee, emeralds, 
+                            and music, it offers both Caribbean and Pacific coastlines. Major cities like 
+                            Bogotá, Medellín, and Cartagena showcase its beauty and history.
+                        </p>
+                    </div>
+                </div>
+
+                <img id="profile_picture" src="images/profile_potho.jpg" alt="photo">
+            </div>
+
+
+        </div>
+
+        <div id="left_div">
+            <h1 class="div_header"> Web Dev Resources </h1>
+            <div>
+                <ul>
+                    <li> <a href="#"> Dev.to Community </a> </li>
+                    <li> <a href="#"> Smashing Magazine </a> </li>
+                    <li> <a href="#"> CSS Tricks </a> </li>
+                    <li> <a href="#"> W3 Schools </a> </li>
+                    <li> <a href="#"> Udemy </a> </li>
+                    <li> <a href="#"> Image Placeholder </a> </li>
+                </ul>
+            </div>
+
+        </div>
     </section>
+    <footer>
+        
+        <p> &copy;2025 * Dreiser Morales Chacon * Colombia </p>
+        <p id="date_update"> Last Modification </p>
+    </footer>
+
 </body>
 </html> 
