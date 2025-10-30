@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
-    <script type="index" src="scripts/index.js"></script>
     <title>Document</title>
 </head>
 <body>
-
+    
     <header>
         <h1>
-            WDD 131: Dinamic Web Fundamentals - <span> Dreiser J. Morales </span>
+            WDD 131: Dinamic Web Fundamentals - <span class="hightlited"> Dreiser J. Morales </span>
         </h1>
     </header>
-
+    
     <nav>
         <ul> <li>  <a href="www.linkedin.com/in/dreiser-morales-645788263"> LinkedIn </a> </li> 
             <li> <a href="#"> Canvas </a> </li>
@@ -22,30 +21,29 @@
             <li> <a href="#"> Final Project </a> </li>
         </ul>
     </nav>
-
+    
     <section>
         <div id="right_div">
             <h1 class="div_header"> About Me </h1>
 
             <div id="about_me">
-                <div>
+                <div id="left_about_me">
                     <p class="description">
                         My name is Dreiser, I was born in Venezuela but I moved to Colombia 
                         almost 10 years ago, I live alone but soon I will marriage. i currently 
-                        work as Paralegal Assistant at Betzold LawM, I'm studiying software 
+                        work as Paralegal Assistant at Betzold Law, I'm studiying software 
                         developement in BYU Idaho University, I do not have children, I like to
                         play soccer and Pokemon Online on my phone. My faforite color is Black
                         I love Sushi, and traveling, simple things matter.
                     </p>
 
-                    <h1 id="description_header"> Cucuta Colombia </h1>
-
-                    <div class="description">
+                    <h1 id="description_header"> Cucuta, Colombia </h1>
+                    
+                    <div id="right_about_me">
                         <div id="flag_div">
                             <img id="flag_img" src="images/colombia_flag.png" alt="">
-                            <details>Oficial Flag of Colombia</details>
+                            <tfoot>Oficial Flag of Colombia</tfoot>
                         </div>
-
                         <p>
                             Colombia is a vibrant South American country known for its rich culture, 
                             stunning landscapes, and friendly people. Famous for its coffee, emeralds, 
@@ -57,30 +55,29 @@
 
                 <img id="profile_picture" src="images/profile_potho.jpg" alt="photo">
             </div>
-
-
         </div>
-
+        
         <div id="left_div">
             <h1 class="div_header"> Web Dev Resources </h1>
             <div>
-                <ul>
+                <ul id="links">
                     <li> <a href="#"> Dev.to Community </a> </li>
                     <li> <a href="#"> Smashing Magazine </a> </li>
                     <li> <a href="#"> CSS Tricks </a> </li>
                     <li> <a href="#"> W3 Schools </a> </li>
                     <li> <a href="#"> Udemy </a> </li>
-                    <li> <a href="#"> Image Placeholder </a> </li>
+                    <li> <a href="#"> Image Placeholder </a> </li> 
                 </ul>
             </div>
-
+             
         </div>
     </section>
     <footer>
         
         <p> &copy;2025 * Dreiser Morales Chacon * Colombia </p>
-        <p id="date_update"> Last Modification </p>
+        <p id="date_update"></p>
     </footer>
-
+    
+    <script src="scripts/index.js"></script>
 </body>
-</html> 
+</html>  

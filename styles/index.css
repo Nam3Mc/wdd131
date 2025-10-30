@@ -1,0 +1,132 @@
+body {
+    background-color: rgb(39, 64, 128);
+    margin: 0;
+}
+
+header {
+    color: white;
+    text-align: center;
+    font-size: 10px;
+}
+
+header span {
+    color: yellow;
+    font-size: 12px;
+}
+
+nav ul {
+    background-color: rgb(45, 42, 42);
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style: none;
+    height: 40px;
+    margin: 0;
+    align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+    display: flex;
+    background-color: white;
+}
+
+#right_div {
+    max-width: 60%;
+    border: 1px solid gray;
+    margin: 20px;
+    border-radius: 20px;
+    
+}
+
+.div_header {
+    background-color: rgb(39, 64, 128);
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+    align-content: center;
+}
+
+#about_me {
+    display: flex;
+}
+
+#left_about_me {
+    margin: 20px;
+}
+
+.description {
+    width: 100%;
+}
+
+#description_header {
+    text-align: center;
+    width: 80%;
+    border-bottom: 1px solid gray;
+    justify-self: center;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+#right_about_me {
+    display: flex;
+}
+
+#flag_div {
+    max-width: 25%;
+    text-align: center;
+    font-size: 12px;
+}
+
+#flag_img {
+    width: 100%;
+    padding: 20px;
+}
+
+#right_about_me p {
+    width: 100%;
+    margin-left: 40px;
+}
+
+#profile_picture{
+    height: 400px;
+    padding: 20px;
+}
+
+#left_div {
+    width: 40%;
+    border: 1px solid gray;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+#left_div a {
+    color: blue;
+    text-decoration: underline;
+}
+
+#left_div a:focus  {
+    color: rgb(84, 30, 135);
+}
+
+#links {
+    margin-top: 30%;
+}
+
+footer {
+    color: white;
+    text-align: center;
+}
+
+#date_update {
+    color: yellow;
+    font-size: 14px;
+}
