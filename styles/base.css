@@ -3,32 +3,84 @@ body {
     margin: 0;
 }
 
+header {
+    text-align: center;
+}
 
+header h1{
+    color: yellow;
+    font-size: 1.5rem;
+    height: 3rem;
+}
 
+#course-title {
+    color: white;
+    font-size: 2rem;
+}
 
-/* Most CSS rules will need to be checked  */
-/* manually and visually to ensure they meet  */
-/* the assignment requirements including the  */
-/* use of CSS Flex in the nav, hover effect,  */
-/* limited main width, and CSS Grid used to  */
-/* layout the main and/or section cards. */
-/*  */
-/* structural rules */
-/*  */
-/* CSS must include rules for header, main, and footer. */
-/* Missing CSS rules: header, main, footer */
+nav {
+    background-color: rgb(40, 38, 37);
+    height: 3.5rem;
+    align-content: center;
+    font-size: 1.2rem;
+}
 
-/* display: flex */
-/* */
-/* Use Flexbox at least once. */
-/* No display: flex (or inline-flex) found anywhere in CSS *** */
+header ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
 
-/* display: grid */
-/* */
-/* Use CSS Grid at least once. */
-/* No display: grid (or inline-grid) found anywhere in CSS *** */
+header a {
+    text-decoration: none;
+    transition: 1.5s ease;
+    color: white;
+}
 
-/* :hover */
-/* */
-/* Use a :hover style somewhere. */
-/* No :hover pseudoclass found anywhere in CSS *** */
+header a:hover {
+    font-size: 1.5rem;
+    color: gray;
+}
+
+main {
+    min-height: 100vh; 
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 3.5fr 2fr;
+    background-color: white;
+}
+
+.card {
+    border: 1px solid gray;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.div_header {
+    background-color: rgb(39, 64, 128);
+    margin: 0;
+    border-radius: 19px 19px 0 0;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#about_me {
+    display: flex;
+    margin: 20px;
+}
+
+#left_about_me {
+    width: 70%;
+}
+
+#flag_img {
+    width: 200px;
+}
+
+#profile_picture {
+    height: 400px;
+    margin: auto;
+    border-radius: 20px;
+}
