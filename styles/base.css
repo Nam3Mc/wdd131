@@ -3,9 +3,32 @@ body {
     margin: 0;
 }
 
-Most CSS rules will need to be checked 
-manually and visually to ensure they meet 
-the assignment requirements including the 
-use of CSS Flex in the nav, hover effect, 
-limited main width, and CSS Grid used to 
-layout the main and/or section cards.
+
+
+
+/* Most CSS rules will need to be checked  */
+/* manually and visually to ensure they meet  */
+/* the assignment requirements including the  */
+/* use of CSS Flex in the nav, hover effect,  */
+/* limited main width, and CSS Grid used to  */
+/* layout the main and/or section cards. */
+/*  */
+/* structural rules */
+/*  */
+/* CSS must include rules for header, main, and footer. */
+/* Missing CSS rules: header, main, footer */
+
+/* display: flex */
+/* */
+/* Use Flexbox at least once. */
+/* No display: flex (or inline-flex) found anywhere in CSS *** */
+
+/* display: grid */
+/* */
+/* Use CSS Grid at least once. */
+/* No display: grid (or inline-grid) found anywhere in CSS *** */
+
+/* :hover */
+/* */
+/* Use a :hover style somewhere. */
+/* No :hover pseudoclass found anywhere in CSS *** */
