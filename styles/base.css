@@ -117,3 +117,15 @@ footer {
     color: yellow;
     font-size: 0.8rem;
 }
+
+#links a{
+    color: blue;
+}
+
+#links a:hover {
+    color: rgb(26, 166, 230);
+}
+
+#links a:focus {
+    color: blueviolet;
+}
