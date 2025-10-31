@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: rgb(39, 64, 128);
     margin: 0;
 }
@@ -28,6 +28,14 @@ nav ul {
 a {
   color: white;
   text-decoration: none;
+}
+
+#hidden {
+    display: none;
+}
+
+main {
+    
 }
 
 section {
@@ -131,4 +139,4 @@ footer {
 #date_update {
     color: yellow;
     font-size: 14px;
-} 
+}  */
