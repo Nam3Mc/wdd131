@@ -1,8 +1,7 @@
-/* FUENTES */
+FUENTES
 body {
     background-color: rgb(39, 64, 128);
     margin: 0;
-    font-family: "Comic Sans MS", "Poppins", sans-serif;
 }
 
 header {
@@ -10,7 +9,7 @@ header {
 }
 
 header h1 {
-    color: yellow;
+    color: #ffea00;
     font-size: 1.5rem;
     height: 3rem;
     font-family: "Poppins", "Comic Sans MS", sans-serif;
@@ -116,6 +115,9 @@ footer {
 #date_update {
     color: yellow;
     font-size: 0.8rem;
+}
+#links li {
+    padding: 5px;
 }
 
 #links a{
