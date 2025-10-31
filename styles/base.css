@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+main {
+    margin: 0;
+
+}
+
 header {
     color: white;
     text-align: center;
@@ -129,6 +134,7 @@ footer {
 }
 
 #date_update {
+    display: grid;
     color: yellow;
     font-size: 14px;
 }
