@@ -4,31 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 – Dynamic Web Fundamentals – Dreiser Morales</title>
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Dreiser Morales, a BYU-Idaho software development student and Paralegal Assistant passionate about web development, technology, and learning.">
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - 
+        Dreiser Morales, a BYU-Idaho software development student and Paralegal 
+        Assistant.">
     <meta name="author" content="Dreiser Morales">
-    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- Preconnects for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script src="scripts/getdates.js" defer></script>
+
 </head>
+
 <body>
     
     <header>
-        <h1>
-            WDD 131: Dinamic Web Fundamentals - <span class="hightlited"> Dreiser J. Morales </span>
-        </h1>
+        <h1> <span id="course-title"> WDD 131: Dinamic Web Fundamentals </span>  Dreiser J. Morales </h1>
+        
+        <nav>
+            <ul> <li>  <a href="https://www.linkedin.com/in/dreiser-morales-645788263/"> LinkedIn </a> </li> 
+                <li> <a href="https://byupw.instructure.com/"> Canvas </a> </li>
+                <li> <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"> Scriptures </a> </li>
+                <li> <a href="#"> Final Project </a> </li>
+            </ul>
+        </nav>
     </header>
-    
-    <nav>
-        <ul> <li>  <a href="https://www.linkedin.com/in/dreiser-morales-645788263/"> LinkedIn </a> </li> 
-            <li> <a href="https://byupw.instructure.com/"> Canvas </a> </li>
-            <li> <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"> Scriptures </a> </li>
-            <li> <a href="#"> Final Project </a> </li>
-        </ul>
-    </nav>
 
     <main>
         <section class="card">
             <div id="right_div">
-                <h1 class="div_header"> About Me </h1>
+                <h2 class="div_header"> About Me </h2>
                 
                 <div id="about_me">
                     <div id="left_about_me">
@@ -41,7 +53,7 @@
                             I love Sushi, and traveling, simple things matter.
                         </p>
                         
-                        <h1 id="description_header"> Cucuta, Colombia </h1>
+                        <h2 id="description_header"> Cucuta, Colombia </h2>
                         
                         <div id="right_about_me">
                             <div id="flag_div">
@@ -63,9 +75,9 @@
         </section>
 
         <section class="card">
-            
+
             <div id="left_div">
-                <h1 class="div_header"> Web Dev Resources </h1>
+                <h2 class="div_header"> Web Dev Resources </h2>
                 <div>
                     <ul id="links">
                         <li> <a href="#"> Dev.to Community </a> </li>
@@ -80,12 +92,9 @@
             </div>
         </section>
     </main>
-    <footer>
-        
-        <p> &copy;2025 * Dreiser Morales Chacon * Colombia </p>
+    <footer>        
+        <p> <span>&copy;2025</span> * Dreiser Morales Chacon * Colombia </p>
         <p id="date_update"></p>
     </footer>
-    
-    <script src="scripts/getdates.js"></script>
 </body>
 </html>  
