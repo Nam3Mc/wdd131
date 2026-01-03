@@ -10,16 +10,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Special+Elite&display=swap" rel="stylesheet">
-
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
         <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
         <nav>
-            <li><a href="#"> LinkdIn</a></li>
-            <li><a href="#"> I-Learn </a></li>
-            <li><a href="#"> Scripture </a></li>
-            <li><a href="#"> Final Project </a></li>
+            <ul>
+
+                <li><a href="#"> LinkdIn</a></li>
+                <li><a href="#"> I-Learn </a></li>
+                <li><a href="#"> Scripture </a></li>
+                <li><a href="#"> Final Project </a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -27,22 +30,28 @@
             Dreiser Morales
         </h1>
         <section class="card">
-            <h2>
+            <h2 class="title">
                 About Me
             </h2>
-            <p>
-                Hello! My name is Dreiser Morales, I am from Colombia. I am currently learning web development through the WDD 131 - Dynamic Web Fundamentals course. I have a passion for technology and creativity, and I am excited to enhance my skills in web design and development.
-            </p>
-            <img src="" alt="Picture of Dreiser Morales">
-            <h2> Cucuta, Colombia</h2>
-            <img src="" alt="colombian flag">
-            <p>
-                colombia is a beautiful country located in South America, known for its diverse culture, stunning landscapes, and warm people. From the vibrant streets of Bogotá to the picturesque beaches of Cartagena, Colombia offers a rich tapestry of experiences for visitors and locals alike.
-            </p>
-
+            <div id="left-side">
+                <p id="about-me">
+                    Hello! My name is Dreiser Morales, I am from Colombia. I am currently learning web development through the WDD 131 - Dynamic Web Fundamentals course. I have a passion for technology and creativity, and I am excited to enhance my skills in web design and development.
+                </p>
+                <img src="images/profile.png" alt="Picture of Dreiser Morales" id="profile">
+                <h2> Cucuta, Colombia</h2>
+                <figure id="flag">
+                    <img src="images/colombia-flag.webp" alt="colombian flag">
+                    <figcaption>Colombian Flag</figcaption>
+                </figure>
+                <p id="about-colombia">
+                    colombia is a beautiful country located in South America, known for its diverse culture, stunning landscapes, and warm people. From the vibrant streets of Bogotá to the picturesque beaches of Cartagena, Colombia offers a rich tapestry of experiences for visitors and locals alike.
+                </p>
+            </div>
         </section>
-        <section class="card">
-            <h2>Web Dev Resources</h2>
+        <section class="card" id="right-side">
+            <h2 class="title">
+                Web Dev Resources
+            </h2>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN HTML Documentation</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN CSS Documentation</a></li>
@@ -54,8 +63,8 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 <span>Dreiser Morales</span> Colombia</p>
-        <p></p>
+        <p>&copy; 2026 <span>Dreiser Morales</span> Colombia</p>
+        <p id="updated"> </p>
     </footer>
 </body>
 </html>
