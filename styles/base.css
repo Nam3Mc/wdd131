@@ -2,9 +2,40 @@ body {
   background-color: #0b0b0b;
   color: #eaeaea;
   font-family: 'Special Elite', serif;
+  height: 1vmax;
 }
 
 h1, h2, h3 {
   font-family: 'Cinzel Decorative', serif;
   letter-spacing: 2px;
+}
+
+header {
+  background-color: #1f1f1f;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 0;
+  display: inline-flex;;
+}
+
+nav a {
+  color: #eaeaea;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: #ff5733;
+}
+
+nav {
+  height: auto;
 }
