@@ -17,16 +17,23 @@ header {
 }
 
 nav {
-  margin-top: 10px;
-  background-color: #8888886a;
+  background-color: #4140406a;
   height: 50px;
-  align-content: center;
+  align-content: space-evenly;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 nav li {
   list-style-type: none;
   padding: 0;
-  display: inline-flex;;
+  display: inline-flex;
 }
 
 nav a {
