@@ -17,7 +17,6 @@ header {
 }
 
 nav {
-  background-color: #4140406a;
   height: 50px;
   align-content: space-evenly;
 }
@@ -44,6 +43,7 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+  color: #ffbd69;
 }
 
 nav a:active {
@@ -123,11 +123,22 @@ footer {
   padding: 10px;
 }
 
+#right-side a {
+  padding: 10px;
+  color: #ffbd69;
+  text-decoration: none;
+}
+
 #right-side ul {
   text-align: left;
   padding-left: 20px;
+  color: #ffbd69;
 }
 
 #right-side ul li {
   margin-bottom: 8px;
+}
+
+#right-side a:hover {
+  text-decoration: underline;
 }
