@@ -1,10 +1,6 @@
 body { 
     font-family: "Roboto Slab", serif;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
+    max-width: 640px;
 }
 
 a {
@@ -17,24 +13,49 @@ a:hover {
     text-decoration: underline;
 }
 
-li {
-    width: 100%;
+ul {
+    position: absolute;
+    top: 5%;
+    right: 0%;
+    left: 0%;
+    bottom: 55%;
+    list-style: none;
+    font-size: 1.5rem;
+    background-color: whitesmoke;
+    align-content: center;
 }
 
-main {
+li {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin: auto auto auto -30px;
+}
+
+.hidden {
+    display: none;
+}
+
+header h2 {
+    width: 100%;
     display: grid;
-    grid-template: 1fr/ 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+main {
+    
+}
+
+figure, img {
+    width: 250px;
     margin: auto;
+    text-align: center;
 }
 
 main h1 {
     grid-column: 1 / 4;
     text-align: center;
-}
-
-img {
-    width: 250px;
-    height: 200px;
 }
 
 footer {
