@@ -51,6 +51,10 @@ picture img {
   color: var(--canada-red);
 }
 
+.weather-section svg {
+  justify-self: center;
+}
+
 /* tables */
 table {
   width: 100%;
