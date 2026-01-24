@@ -45,14 +45,12 @@
     .data-section h2 {
         display: block;
         text-align: left;
-        background-color: #1F6F5450;
-    }
-
-
-    h2 {
+        background-color: var(--canada-red);
         font-size: 2rem;
         margin-left: -30px;
         padding: 5px;
+        color: white;
+
     }
 
 

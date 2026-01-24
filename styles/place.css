@@ -12,6 +12,7 @@ body {
   background-color: var(--canada-white);
   color: var(--canada-charcoal);
   max-width: 425px;
+  margin: auto;
 }
 
 /* ===== HEADER ===== */
