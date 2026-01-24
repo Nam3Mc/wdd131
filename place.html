@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD,131,Dynamic Web Fundamentals - Dreiser Morales</title>
-    <meta name="description" content="My fist web page using HTML5 and CSS for WDD 131 - Dynamic Web Fundamentals course.">
+    <meta name="description" content="A dynamic web page for WDD 131 course by Dreiser Morales">
     <meta name="author" content="Dreiser Morales">
     <link rel="stylesheet" href="styles/place.css">
+    <!-- <link rel="stylesheet" href="styles/place-large.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Special+Elite&display=swap" rel="stylesheet">
@@ -15,10 +16,84 @@
 </head>
 <body>
     
+    <header>
+        <h1>CANADA</h1>
+    </header>
 
+    <main>
+        <section>
+
+            <picture>
+                <source media="(min-width: 7250px)" srcset="images/hero-canada-large.webp">
+                <source media="(min-width: 500px)" srcset="images/hero-canada-small.webp">
+                <img src="images/hero-canada-large.webp" alt="A scenic view of Canada">
+            </picture>
+            
+            <div class="data-section">
+                <h2>Data</h2>
+                <table>
+                    <tr>
+                        <td>Area:  </td>
+                        <td>9,984,670 sq km</td>
+                    </tr>
+                    <tr>
+                        <td>Population:  </td>
+                        <td>40,000,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Capital:  </td>
+                        <td>Ottawa</td>
+                    </tr>
+                    <tr>
+                        <td>Languages:  </td>
+                        <td>English, French</td>
+                    </tr>
+                    <tr>
+                        <td>Currency:  </td>
+                        <td>Canadian Dollar (CAD)</td>
+                    </tr>
+                    <tr>
+                        <td>Time Zones:  </td>
+                        <td>UTC−3.5 to UTC−8</td>
+                    </tr>
+                    <tr>
+                        <td>Calling Code:  </td>
+                        <td>+1</td>
+                    </tr>
+                    <tr>
+                        <td>Internet TLD:  </td>
+                        <td>.ca</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="weather-section">
+              <h2>Weather <span>🌤️</span></h2>
+                <table>
+                    <tr>
+                        <td>Temperature:  </td>
+                        <td>5°C</td>
+                    </tr>
+                    <tr>
+                        <td>Conditions:  </td>
+                        <td>Partly Cloudy</td>
+                    </tr>
+                    <tr>
+                        <td>Wind:  </td>
+                        <td>10 km/h</td>
+                    </tr>
+                    <tr>
+                        <td>Wind Chill:  </td>
+                        <td>2°C</td>
+                    </tr>
+                </table>
+            </div>     
+          
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Dreiser Morales. All rights reserved.</p>
+        <p>&copy; <span id="year"> </span> 🍁 Dreiser Morales. All rights reserved. 🍁</p>
         <p id="updated"> </p>
     </footer>
 </body>
