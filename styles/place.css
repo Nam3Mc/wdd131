@@ -119,11 +119,11 @@ footer span#year {
     }
 
     .data-section {
-        margin-top: 8vh;
-        margin-left: 5vh;
+        margin-top: 2vh;
+        margin-left: 2vh;
         grid-column: 1/2;
         grid-row: 1/2;
-        width: 65% ;
+        width: 100% ;
         height: fit-content;
         padding: 10%;
         background-color: #ffffff99;
@@ -132,7 +132,7 @@ footer span#year {
     .weather-section {
         grid-column: 3/4;
         grid-row: 2/3;
-         width: fit-content;
+        width: 75% ;
         height: fit-content;
         padding: 10%;
         background-color: #ffffff99;
