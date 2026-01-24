@@ -46,13 +46,20 @@ picture img {
 
 .data-section h2,
 .weather-section h2 {
-  display: grid;
   text-align: center;
   color: var(--canada-red);
 }
 
-.weather-section svg {
-  justify-self: center;
+.svg-icon {
+  width: 5rem;
+  display: block;
+   margin: 0 auto;
+
+
+}
+
+.emoji-icon {
+  display: none;
 }
 
 /* tables */
