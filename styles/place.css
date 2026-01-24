@@ -1,20 +1,22 @@
-/* Background: #FFFFFF / #F2F2F2
-Header & Buttons: #D52B1E
-Text: #2E2E2E
-Links: #1F6F54
-Hover Effects: #A6191F */
-
+:root {
+  --canada-red: #B71C1C;        /* darker red for better contrast */
+  --canada-dark-red: #8E1518;   /* slightly darker accent */
+  --canada-white: #FFFFFF;
+  --canada-light-gray: #ECECEC; /* slightly darker gray */
+  --canada-charcoal: #1F1F1F;   /* darker text color */
+  --canada-green: #1F6F54;
+}
 
 /* ===== GLOBAL COLORS ===== */
 body {
-  background-color: #FFFFFF;
-  color: #2E2E2E;
+  background-color: var(--canada-white);
+  color: var(--canada-charcoal);
   max-width: 425px;
 }
 
 /* ===== HEADER ===== */
 header {
-  background-color: #D52B1E;
+  background-color: var(--canada-red);
   height: 100px;
   text-align: center;
   align-content: center;
@@ -22,56 +24,53 @@ header {
 }
 
 header h1 {
-  color: #FFFFFF;
+  color: var(--canada-white);
 }
 
 /* ===== MAIN SECTION BACKGROUND ===== */
 main {
-  background-color: #F2F2F2;
+  background-color: var(--canada-light-gray);
 }
 
 picture img {
-    max-width: 95%;
-    padding: 5%;
+  max-width: 95%;
+  padding: 5%;
 }
 
 /* ===== DATA & WEATHER SECTIONS ===== */
 .data-section,
 .weather-section {
-  background-color: #FFFFFF;
+  background-color: var(--canada-white);
 }
 
 .data-section h2,
 .weather-section h2 {
-    display: grid;
-    text-align: center;
-}
-
-/* Section titles */
-.data-section h2,
-.weather-section h2 {
-  color: #D52B1E;
+  display: grid;
+  text-align: center;
+  color: var(--canada-red);
 }
 
 /* tables */
 table {
-    width: 100%;
+  width: 100%;
 }
 
 table td:first-child {
   text-align: right;
   width: 45%;
   font-weight: bold;
+  color: var(--canada-charcoal);
 }
 
 table td:last-child {
   text-align: left;
   width: 45%;
+  color: var(--canada-charcoal);
 }
 
 footer {
-  background-color: #2E2E2E;
-  color: #FFFFFF;
+  background-color: var(--canada-charcoal);
+  color: var(--canada-white);
   position: relative;
   text-align: center;
 }
@@ -81,7 +80,7 @@ footer::before {
   content: "";
   display: block;
   height: 6px;
-  background-color: #D52B1E;
+  background-color: var(--canada-red);
   width: 100%;
 }
 
@@ -90,11 +89,6 @@ footer::after {
   content: "";
   display: block;
   height: 3px;
-  background-color: #A6191F;
+  background-color: var(--canada-dark-red);
   width: 100%;
-}
-
-/* Year highlight */
-footer span#year {
-  color: #D52B1E;
 }
