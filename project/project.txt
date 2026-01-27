@@ -1,0 +1,93 @@
+Project subject E-Commerce for my business
+
+This project consists of a simple e-commerce website designed as a landing page for a business. The website allows customers to browse products, manage a shopping cart, submit reviews, and complete a basic checkout process. All data is handled on the client side using JavaScript LocalStorage, without any backend or database.
+
+1. Landing Page (Home / Product List)
+
+Displays all available products in stock
+
+Each product shows:
+
+Name
+
+Price
+
+Description
+
+Availability status
+
+Users can:
+
+View product details
+
+Add products to the shopping cart
+
+Remove products from the shopping cart
+
+Click on a product to submit a review
+
+2. Shopping Cart Page
+
+Dedicated page for the shopping cart
+
+Displays:
+
+List of selected products
+
+Quantity per product
+
+Individual prices
+
+Total order cost
+
+Users can:
+
+Increase or decrease product quantity
+
+Remove products from the cart
+
+Proceed to checkout
+
+Cart data is saved in LocalStorage
+
+3. Checkout Page
+
+Checkout is handled through a form requesting customer information:
+
+Full name
+
+Email
+
+Phone number
+
+Address (only required for delivery)
+
+Delivery options:
+
+Pick Up
+
+Delivery
+
+Upon submission:
+
+Order summary is displayed
+
+Cart is cleared from LocalStorage
+
+4. Product Review Page
+
+Separate page dedicated to product reviews
+
+Users can:
+
+Select a product
+
+Submit a review (text and rating)
+
+Reviews are:
+
+Stored in a an array or local storage 
+
+Displayed when viewing the selected product
+
+The reason this subject was selected is because I want to explore the creation of an e-commerce website for my future customers. This project allows me to understand how customers interact with products, manage a shopping cart, and complete a purchase using a simple and user-friendly interface.
