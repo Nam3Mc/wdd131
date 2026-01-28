@@ -73,8 +73,7 @@ const temples = [
   },
 ];
 
-
-
+// date update function
 const btnmenu = document.querySelector('#menu-button')
 const ul = document.querySelector('ul')
 
@@ -82,7 +81,7 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 500) {
         btnmenu.classList.add('hidden')
         ul.classList.remove('hidden')
-        }
+    }
     else {
         btnmenu.classList.remove('hidden')
         ul.classList.add('hidden')
@@ -93,4 +92,105 @@ btnmenu.addEventListener('click', () => {
     ul.classList.toggle('hidden')
 })
 
+let main = document.querySelector('#main')
+let home = document.querySelector('#home')
+let olders = document.querySelector('#old')
+let newes = document.querySelector('#new')
+let larges = document.querySelector('#large')
+let smallers = document.querySelector('#small')
+
+function cardRender(temple) {
+    let name = document.createElement('h2')
+    let location = document.createElement('h3')
+    let dedication = document.createElement('h3')
+    let size = document.createElement('h3')
+    let templeCard = document.createElement('div')
+    let picture = document.createElement('img')
+    
+    name.textContent = temple.templeName
+    location.innerHTML = `Location: ${temple.location}`
+    dedication.innerHTML = `Dedicated: ${temple.dedicated}`
+    size.innerHTML = `Size: ${temple.area} sq ft`
+    picture.src = temple.imageUrl
+    picture.alt = temple.name
+    picture.loading = "lazy"
+    templeCard.classList.add('card')
+    
+    templeCard.appendChild(name)
+    templeCard.appendChild(location)
+    templeCard.appendChild(dedication)
+    templeCard.appendChild(size)
+    templeCard.appendChild(picture)
+    return templeCard
+}
+
+function filterOlders(array) {
+    main.querySelectorAll('.card').forEach( card => card.remove())
+    main.querySelector('#title').innerHTML = 'Olds'
+    array.forEach(item => {
+        let year = item.dedicated.split(',')[0]
+        if (year < 1900) {
+            templeCard = cardRender(item)
+            main.appendChild(templeCard)
+        }
+    })
+}
+
+function filterNewests(array) {
+    main.querySelectorAll('.card').forEach( card => card.remove())
+    main.querySelector('#title').innerHTML = 'News'
+    array.forEach(item => {
+        let year = item.dedicated.split(',')[0]
+        if (year > 2000) {
+            templeCard = cardRender(item)
+            main.appendChild(templeCard)
+        }
+    })
+}
+
+function filterLargers(array) {
+    main.querySelectorAll('.card').forEach( card => card.remove())
+    main.querySelector('#title').innerHTML = 'Larges'
+    array.forEach(item => {
+        let size = item.area
+        if (size > 90000) {
+            empleCard = cardRender(item)
+            main.appendChild(templeCard)
+        }
+    })
+}
+
+function filterSmallers(array) {
+    main.querySelectorAll('.card').forEach( card => card.remove())
+    main.querySelector('#title').innerHTML = 'Smallers'
+    array.forEach(item => {
+        let size = item.area
+        if (size < 10000) {
+            templeCard = cardRender(item)
+            main.appendChild(templeCard)        
+        }
+    })
+}
+
+home.addEventListener('click', () => {
+    main.querySelectorAll('.card').forEach( card => card.remove())
+    main.querySelector('#title').innerHTML = 'Home'
+    temples.forEach(temple => {
+        templeCard = cardRender(temple)
+        main.appendChild(templeCard)        
+    })
+})
+
+olders.addEventListener('click', () => filterOlders(temples))
+newes.addEventListener('click', () => filterNewests(temples))
+larges.addEventListener('click', () => filterLargers(temples))
+smallers.addEventListener('click', () => filterSmallers(temples))
+
+document.addEventListener('DOMContentLoaded', () => {
+    main.querySelectorAll('.card').forEach( card => card.remove())
+    temples.forEach(temple => {
+        templeCard = cardRender(temple)
+        main.appendChild(templeCard)        
+    })
+})
 

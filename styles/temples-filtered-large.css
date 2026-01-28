@@ -1,15 +1,17 @@
 @media screen and ( min-width: 500px) {
     
-    body {
-        max-width: 100vh;
-        margin: auto;
-    }
-    
     main {
         width: 100%;
         display: grid;
-        grid-template: 1fr / 1fr 1fr 1fr;
+        grid-template: 1fr/ 1fr 1fr 1fr;
         margin: auto;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    main h1 {
+        grid-column: 1 / 4;
+        text-align: center;
     }
 
     nav ul {
@@ -20,15 +22,31 @@
         list-style: none;
         justify-content: space-evenly;
     }
+    
+     .card {
+        max-width: 420px;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+        width: 100%;
+      }
 
-    figure, img {
-        width: 250px;
-        height: 200px;
-    }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+      }
 
-    figure {
-        justify-items: center;
-        margin: 10px auto 15px auto;
-        padding: 10px;
-    }
+      .card h2 {
+        font-size: 1.7rem;
+        margin: 1.25rem 1.5rem 0.75rem;
+      }
+
+      .card h3 {
+        font-size: 1.05rem;
+        margin: 0.35rem 1.5rem;
+      }
+
+      .card img {
+        height: 260px;
+      }
+
 }
