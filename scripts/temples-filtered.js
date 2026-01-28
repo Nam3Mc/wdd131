@@ -77,7 +77,7 @@ const temples = [
       dedicated: "2009, August, 21-23",
       area: 60000,
       imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/merida-mexico-temple/merida-mexico-temple-14103.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/oquirrh-mountain-utah-temple/oquirrh-mountain-utah-temple-4035.jpg"
     },
 ];
 
