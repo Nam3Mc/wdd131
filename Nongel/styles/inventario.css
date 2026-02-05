@@ -1,0 +1,97 @@
+/* =====================
+   INVENTARIO
+===================== */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.page-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* Tabla */
+.table-container {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.inventory-table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+/* Estados */
+.status {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.ok {
+  background: #e6f7ef;
+  color: var(--green-dark);
+}
+
+.status.low {
+  background: #fff0e6;
+  color: var(--orange);
+}
+
+/* Responsive tabla → cards */
+@media (max-width: 767px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .inventory-table {
+    display: none;
+  }
+
+  .table-container::after {
+    content: "Vista móvil: se recomienda cards (fase siguiente)";
+    display: block;
+    padding: 16px;
+    font-size: 13px;
+    color: #666;
+  }
+}

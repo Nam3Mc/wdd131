@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagos | Panel de Administración</title>
+  <link rel="stylesheet" href="styles/pagos.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+  
+</head>
+<body class="dashboard">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <div class="logo">MiNegocio</div>
+    </div>
+    <div class="header-right">
+      <span class="placeholder">🔔</span>
+      <span class="placeholder">👤</span>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <ul>
+        <a href="/index.html" class="menu-item active"><span>🏠</span>Inicio</a>
+        <a href="inventario.html" class="menu-item"><span>🧪</span>Inventario</a>
+        <a href="clientes.html" class="menu-item"><span>👥</span>Clientes</a>
+        <a href="empleados.html" class="menu-item"><span>👷</span>Empleados</a>
+        <a href="pagos.html" class="menu-item"><span>💳</span>Pagos</a>
+        <a href="servicios.html" class="menu-item"><span>🛠️</span>Servicios</a>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <div class="page-header">
+      <h1>Gestión de Pagos</h1>
+      <button class="btn-primary">Registrar Pago</button>
+    </div>
+
+    <!-- Resumen de pagos -->
+    <section class="grid-3">
+      <div class="card">
+        <h3>Total Ingresos</h3>
+        <p class="metric">$12,450</p>
+      </div>
+      <div class="card">
+        <h3>Pagos Pendientes</h3>
+        <p class="metric">5</p>
+      </div>
+      <div class="card">
+        <h3>Pagos del Día</h3>
+        <p class="metric">$1,250</p>
+      </div>
+    </section>
+
+    <!-- Tabla de pagos -->
+    <section class="card">
+      <h2>Historial de Pagos</h2>
+
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Cliente</th>
+              <th>Servicio</th>
+              <th>Método</th>
+              <th>Monto</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05/02/2026</td>
+              <td>Juan Pérez</td>
+              <td>Limpieza Profunda</td>
+              <td>Efectivo</td>
+              <td>$120</td>
+              <td><span class="status paid">Pagado</span></td>
+            </tr>
+            <tr>
+              <td>05/02/2026</td>
+              <td>Ana Gómez</td>
+              <td>Mantenimiento</td>
+              <td>Transferencia</td>
+              <td>$80</td>
+              <td><span class="status pending">Pendiente</span></td>
+            </tr>
+            <tr>
+              <td>04/02/2026</td>
+              <td>Carlos Ruiz</td>
+              <td>Desinfección</td>
+              <td>Tarjeta</td>
+              <td>$150</td>
+              <td><span class="status paid">Pagado</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="scripts/index.js"></script>
+</body>
+</html>

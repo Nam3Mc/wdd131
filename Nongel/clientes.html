@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>NRV | Clientes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/clientes.css" defer>
+  <link rel="stylesheet" href="styles/index.css" defer>
+  <script src="scripts/index.js" defer></script>
+
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <button class="toggle-btn" id="toggleSidebar">☰</button>
+      <div class="logo">NRV Admin</div>
+    </div>
+    <div class="header-right">
+      Clientes
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="menu">
+      <a href="/index.html" class="menu-item active"><span>🏠</span>Inicio</a>
+      <a href="inventario.html" class="menu-item"><span>🧪</span>Inventario</a>
+      <a href="clientes.html" class="menu-item"><span>👥</span>Clientes</a>
+      <a href="empleados.html" class="menu-item"><span>👷</span>Empleados</a>
+      <a href="pagos.html" class="menu-item"><span>💳</span>Pagos</a>
+      <a href="servicios.html" class="menu-item"><span>🛠️</span>Servicios</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER DE PÁGINA -->
+    <section class="page-header">
+      <div>
+        <h1>Clientes</h1>
+        <p>Gestión de clientes y contactos</p>
+      </div>
+
+      <button class="btn-primary">
+        + Nuevo Cliente
+      </button>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="filters">
+      <input type="text" placeholder="Buscar cliente..." />
+      <select>
+        <option>Todos</option>
+        <option>Activos</option>
+        <option>Inactivos</option>
+      </select>
+    </section>
+
+    <!-- TABLA CLIENTES -->
+    <section class="table-container">
+      <table class="clients-table">
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Servicios</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="client-cell">
+              <div class="avatar">JP</div>
+              <div>
+                <strong>Juan Pérez</strong>
+                <span class="subtext">Residencial</span>
+              </div>
+            </td>
+            <td>+57 300 123 4567</td>
+            <td>juan@email.com</td>
+            <td>8</td>
+            <td><span class="status ok">Activo</span></td>
+            <td>⋮</td>
+          </tr>
+
+          <tr>
+            <td class="client-cell">
+              <div class="avatar">EA</div>
+              <div>
+                <strong>Empresa ABC</strong>
+                <span class="subtext">Corporativo</span>
+              </div>
+            </td>
+            <td>+57 310 555 7788</td>
+            <td>contacto@abc.com</td>
+            <td>15</td>
+            <td><span class="status ok">Activo</span></td>
+            <td>⋮</td>
+          </tr>
+
+          <tr>
+            <td class="client-cell">
+              <div class="avatar inactive">MG</div>
+              <div>
+                <strong>María Gómez</strong>
+                <span class="subtext">Residencial</span>
+              </div>
+            </td>
+            <td>+57 301 888 2222</td>
+            <td>maria@email.com</td>
+            <td>2</td>
+            <td><span class="status low">Inactivo</span></td>
+            <td>⋮</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

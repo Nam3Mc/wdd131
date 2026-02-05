@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>NRV | Empleados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/empleados.css" defer>
+    <link rel="stylesheet" href="styles/index.css" defer>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <button class="toggle-btn" id="toggleSidebar">☰</button>
+      <div class="logo">NRV Admin</div>
+    </div>
+    <div class="header-right">
+      Empleados
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="menu">
+      <a href="/index.html" class="menu-item active"><span>🏠</span>Inicio</a>
+      <a href="inventario.html" class="menu-item"><span>🧪</span>Inventario</a>
+      <a href="clientes.html" class="menu-item"><span>👥</span>Clientes</a>
+      <a href="empleados.html" class="menu-item"><span>👷</span>Empleados</a>
+      <a href="pagos.html" class="menu-item"><span>💳</span>Pagos</a>
+      <a href="servicios.html" class="menu-item"><span>🛠️</span>Servicios</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER DE PÁGINA -->
+    <section class="page-header">
+      <div>
+        <h1>Empleados</h1>
+        <p>Equipo técnico y administrativo</p>
+      </div>
+
+      <button class="btn-primary">
+        + Nuevo Empleado
+      </button>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="filters">
+      <input type="text" placeholder="Buscar empleado..." />
+      <select>
+        <option>Todos los roles</option>
+        <option>Técnico</option>
+        <option>Supervisor</option>
+        <option>Administrativo</option>
+      </select>
+
+      <select>
+        <option>Todos los estados</option>
+        <option>Activo</option>
+        <option>Vacaciones</option>
+        <option>Inactivo</option>
+      </select>
+    </section>
+
+    <!-- TABLA EMPLEADOS -->
+    <section class="table-container">
+      <table class="employees-table">
+        <thead>
+          <tr>
+            <th>Empleado</th>
+            <th>Rol</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="employee-cell">
+              <div class="avatar">CR</div>
+              <div>
+                <strong>Carlos Ruiz</strong>
+                <span class="subtext">ID #001</span>
+              </div>
+            </td>
+            <td>Técnico</td>
+            <td>+57 300 111 2233</td>
+            <td>carlos@nrv.com</td>
+            <td><span class="status ok">Activo</span></td>
+            <td>⋮</td>
+          </tr>
+
+          <tr>
+            <td class="employee-cell">
+              <div class="avatar">LM</div>
+              <div>
+                <strong>Laura Martínez</strong>
+                <span class="subtext">ID #002</span>
+              </div>
+            </td>
+            <td>Supervisor</td>
+            <td>+57 310 444 8899</td>
+            <td>laura@nrv.com</td>
+            <td><span class="status warning">Vacaciones</span></td>
+            <td>⋮</td>
+          </tr>
+
+          <tr>
+            <td class="employee-cell">
+              <div class="avatar inactive">JP</div>
+              <div>
+                <strong>José Pérez</strong>
+                <span class="subtext">ID #003</span>
+              </div>
+            </td>
+            <td>Administrativo</td>
+            <td>+57 301 999 0000</td>
+            <td>jose@nrv.com</td>
+            <td><span class="status low">Inactivo</span></td>
+            <td>⋮</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<!-- SCRIPT -->
+<script src="scripts/index.js"></script>
+
+</body>
+</html>

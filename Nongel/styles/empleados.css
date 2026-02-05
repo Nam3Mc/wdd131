@@ -1,0 +1,47 @@
+/* =====================
+   EMPLEADOS
+===================== */
+
+.employees-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employees-table th,
+.employees-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.employees-table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+.employee-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Estados extra */
+.status.warning {
+  background: rgba(244, 116, 33, 0.15);
+  color: var(--orange);
+}
+
+/* Responsive empleados */
+@media (max-width: 767px) {
+  .employees-table {
+    display: none;
+  }
+
+  .table-container::after {
+    content: "Vista móvil: tarjetas de empleados (siguiente fase)";
+    display: block;
+    padding: 16px;
+    font-size: 13px;
+    color: #666;
+  }
+}

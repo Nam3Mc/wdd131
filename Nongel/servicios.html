@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>NRV | Servicios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/servicios.css" defer>
+  <link rel="stylesheet" href="styles/index.css" defer>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <button class="toggle-btn" id="toggleSidebar">☰</button>
+      <div class="logo">NRV Admin</div>
+    </div>
+    <div class="header-right">
+      Servicios
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="menu">
+      <a href="/index.html" class="menu-item active"><span>🏠</span>Inicio</a>
+      <a href="inventario.html" class="menu-item"><span>🧪</span>Inventario</a>
+      <a href="clientes.html" class="menu-item"><span>👥</span>Clientes</a>
+      <a href="empleados.html" class="menu-item"><span>👷</span>Empleados</a>
+      <a href="pagos.html" class="menu-item"><span>💳</span>Pagos</a>
+      <a href="servicios.html" class="menu-item"><span>🛠️</span>Servicios</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER DE PÁGINA -->
+    <section class="page-header">
+      <div>
+        <h1>Servicios</h1>
+        <p>Gestión y seguimiento de servicios</p>
+      </div>
+
+      <button class="btn-primary">
+        + Agendar Servicio
+      </button>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="filters">
+      <input type="text" placeholder="Buscar cliente o servicio..." />
+
+      <select>
+        <option>Todos los estados</option>
+        <option>Programado</option>
+        <option>En curso</option>
+        <option>Completado</option>
+        <option>Cancelado</option>
+      </select>
+
+      <input type="date" />
+    </section>
+
+    <!-- TABLA SERVICIOS -->
+    <section class="table-container">
+      <table class="services-table">
+        <thead>
+          <tr>
+            <th>Servicio</th>
+            <th>Cliente</th>
+            <th>Empleado</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Monto</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <strong>Control de Plagas</strong>
+              <span class="subtext">Servicio recurrente</span>
+            </td>
+            <td>Juan Pérez</td>
+            <td>Carlos Ruiz</td>
+            <td>15 Feb 2026 – 09:00</td>
+            <td><span class="status warning">Programado</span></td>
+            <td>$120.000</td>
+            <td>⋮</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Desinfección</strong>
+              <span class="subtext">Empresa</span>
+            </td>
+            <td>Clínica Vida</td>
+            <td>Laura Martínez</td>
+            <td>15 Feb 2026 – 11:00</td>
+            <td><span class="status ok">Completado</span></td>
+            <td>$350.000</td>
+            <td>⋮</td>
+          </tr>
+
+          <tr>
+            <td>
+              <strong>Fumigación</strong>
+              <span class="subtext">Residencial</span>
+            </td>
+            <td>María Gómez</td>
+            <td>José Pérez</td>
+            <td>16 Feb 2026 – 08:30</td>
+            <td><span class="status low">Cancelado</span></td>
+            <td>$0</td>
+            <td>⋮</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</div>
+
+<!-- SCRIPT -->
+<script src="scripts/index.js"></script>
+
+</body>
+</html>

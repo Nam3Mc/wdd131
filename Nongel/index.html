@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>NRV | Panel de Administración</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <button class="toggle-btn" id="toggleSidebar">☰</button>
+      <div class="logo">NRV Admin</div>
+    </div>
+    <div class="header-right">
+      Usuario · Notificaciones
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="menu">
+      <a href="/index.html" class="menu-item active"><span>🏠</span>Inicio</a>
+      <a href="inventario.html" class="menu-item"><span>🧪</span>Inventario</a>
+      <a href="clientes.html" class="menu-item"><span>👥</span>Clientes</a>
+      <a href="empleados.html" class="menu-item"><span>👷</span>Empleados</a>
+      <a href="pagos.html" class="menu-item"><span>💳</span>Pagos</a>
+      <a href="servicios.html" class="menu-item"><span>🛠️</span>Servicios</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="dashboard">
+
+      <!-- COLUMNA PRINCIPAL -->
+      <section class="main-content">
+        <div class="cards">
+          <div class="card">
+            <h4>Servicios Realizados</h4>
+            <div class="value">128</div>
+          </div>
+
+          <div class="card warning">
+            <h4>Servicios Pendientes</h4>
+            <div class="value">12</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Productos con Bajo Stock</h3>
+
+          <div class="panel-row">
+            <span>Cloro Industrial</span>
+            <strong>5</strong>
+          </div>
+          <div class="panel-row">
+            <span>Desinfectante</span>
+            <strong>3</strong>
+          </div>
+          <div class="panel-row">
+            <span>Detergente</span>
+            <strong>2</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLUMNA DERECHA -->
+      <aside class="side-content">
+        <div class="agenda">
+          <h3>Agenda de Hoy</h3>
+
+          <div class="agenda-item">
+            <strong>09:00</strong>
+            <span>Juan Pérez · Limpieza</span>
+          </div>
+
+          <div class="agenda-item">
+            <strong>11:30</strong>
+            <span>Empresa ABC · Fumigación</span>
+          </div>
+
+          <div class="agenda-item">
+            <strong>15:00</strong>
+            <span>María Gómez · Mantenimiento</span>
+          </div>
+        </div>
+
+        <button class="btn-primary" id="openModal">
+          Agendar Servicio
+        </button>
+      </aside>
+
+    </div>
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h2>Agendar Servicio</h2>
+
+    <div class="form-group">
+      <label>Trabajador</label>
+      <select></select>
+    </div>
+
+    <div class="form-group">
+      <label>Tipo de Servicio</label>
+      <select></select>
+    </div>
+
+    <div class="form-group">
+      <label>Fecha</label>
+      <input type="date">
+    </div>
+
+    <div class="form-group">
+      <label>Cliente</label>
+      <input type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Monto</label>
+      <input type="number">
+    </div>
+
+    <label class="checkbox">
+      <input type="checkbox"> Pagado
+    </label>
+
+    <div class="modal-actions">
+      <button class="btn-secondary" id="closeModal">Cancelar</button>
+      <button class="btn-primary">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/index.js"></script>
+</body>
+</html>

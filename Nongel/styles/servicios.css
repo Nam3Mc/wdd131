@@ -1,0 +1,46 @@
+/* =====================
+   SERVICIOS
+===================== */
+
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.services-table th,
+.services-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.services-table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+/* Estados de servicio */
+.status.warning {
+  background: rgba(244, 116, 33, 0.15);
+  color: var(--orange);
+}
+
+.status.low {
+  background: rgba(200, 40, 40, 0.15);
+  color: var(--red);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .services-table {
+    display: none;
+  }
+
+  .table-container::after {
+    content: "Vista móvil: tarjetas de servicios (siguiente fase)";
+    display: block;
+    padding: 16px;
+    font-size: 13px;
+    color: #666;
+  }
+}

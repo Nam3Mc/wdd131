@@ -1,0 +1,65 @@
+/* =====================
+   CLIENTES
+===================== */
+
+.clients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.clients-table th,
+.clients-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.clients-table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+/* Celda cliente */
+.client-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #000;
+}
+
+.avatar.inactive {
+  background: #e5e7eb;
+  color: #666;
+}
+
+.subtext {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Responsive clientes */
+@media (max-width: 767px) {
+  .clients-table {
+    display: none;
+  }
+
+  .table-container::after {
+    content: "Vista móvil: tarjetas de cliente (siguiente fase)";
+    display: block;
+    padding: 16px;
+    font-size: 13px;
+    color: #666;
+  }
+}
