@@ -2,12 +2,12 @@
    ROOT COLOR PALETTE
 ========================= */
 :root {
-  --primary-color: #F4C430;      /* Yellow */
-  --secondary-color: #8B4513;    /* Brown */
-  --background-color: #FFF8E1;   /* Light cream */
+  --primary-color: #F4C430;
+  --secondary-color: #8B4513;
+  --background-color: #FFF8E1;
   --surface-color: #ffffff;
-  --frame-color: #F6E7B4;        /* Soft yellow frame */
-  --element-color: #E0C97A;      /* Neutral placeholder */
+  --frame-color: #F6E7B4;
+  --element-color: #E0C97A;
   --text-color: #333;
   --muted-text: #666;
   --border-color: #D6B656;
@@ -25,6 +25,12 @@ body {
   line-height: 1.6;
 }
 
+header img {
+  max-width: 120px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
 h1, h2 {
   text-align: center;
   color: var(--secondary-color);
@@ -32,6 +38,7 @@ h1, h2 {
 }
 
 section {
+  max-width: 1200px;
   margin: 30px auto;
   padding: 20px;
   background-color: var(--surface-color);
@@ -40,11 +47,17 @@ section {
 }
 
 /* =========================
-   SHARED WIREFRAME WRAPPER
+   MAIN WRAPPER (FIXED)
+========================= */
+.wf-main {
+  display: block; /* important fix */
+}
+
+/* =========================
+   WIREFRAME SECTION
 ========================= */
 .wireframe-section {
-  max-width: 1200px;
-  margin: auto;
+  margin-top: 40px;
 }
 
 /* =========================
@@ -108,13 +121,28 @@ section {
   align-items: center;
   justify-content: center;
   color: var(--secondary-color);
+  font-weight: 600;
 }
 
-/* Layout */
-.wf-main {
+/* =========================
+   DESKTOP CONTENT LAYOUT
+========================= */
+.desktop-frame > .wf-products,
+.desktop-frame > .wf-cart-summary {
+  margin-bottom: 20px;
+}
+
+.desktop-frame {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
   gap: 24px;
+}
+
+.wf-header,
+.wf-hero,
+.wf-footer {
+  grid-column: 1 / -1;
 }
 
 /* Product Grid */
@@ -191,7 +219,6 @@ section {
   height: 60px;
   background-color: var(--primary-color);
   border-radius: 12px;
-  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,4 +330,35 @@ section {
   justify-content: center;
   color: var(--secondary-color);
   font-size: 0.8rem;
+}
+
+/* =========================
+   COLOR SCHEMA SECTION
+========================= */
+.color-schema {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.color-box {
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+}
+
+/* Color Variants */
+.color-primary {
+  background-color: var(--primary-color);
+}
+
+.color-secondary {
+  background-color: var(--secondary-color);
 }
