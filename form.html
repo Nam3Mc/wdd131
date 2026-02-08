@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals - Form Practice Coding">
+    <meta name="author" content="Dreiser Morales">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+
+    <title>Product Review</title>
+</head>
+<body>
+
+<header>
+    <h1>Product Review</h1>
+</header>
+
+<main>
+    <form method="get" action="review.html">
+
+        <!-- Product Name -->
+        <fieldset>
+            <label for="selected">Product Name</label>
+            <select name="product" id="selected" required>
+                <option value="" disabled selected>Select a Product...</option>
+            </select>
+        </fieldset>
+
+        <!-- Rating -->
+        <fieldset>
+            <legend>Overall Rating</legend>
+
+            <label>
+                <input type="radio" name="rate" value="1" required>
+                &#9734;
+            </label>
+
+            <label>
+                <input type="radio" name="rate" value="2">
+                &#9734; &#9734;
+            </label>
+
+            <label>
+                <input type="radio" name="rate" value="3">
+                &#9734; &#9734; &#9734;
+            </label>
+
+            <label>
+                <input type="radio" name="rate" value="4">
+                &#9734; &#9734; &#9734; &#9734;
+            </label>
+
+            <label>
+                <input type="radio" name="rate" value="5">
+                &#9734; &#9734; &#9734; &#9734; &#9734;
+            </label>
+        </fieldset>
+
+        <!-- Installation Date -->
+        <fieldset>
+            <label for="date">Date of Installation</label>
+            <input type="date" name="date" id="date" required>
+        </fieldset>
+
+        <!-- Features -->
+        <fieldset>
+            <legend>
+                Which features did you find useful in the product?
+                <br><span>(check all that apply)</span>
+            </legend>
+
+            <label>
+                <input type="checkbox" name="durability" value="yes">
+                Durability
+            </label>
+
+            <label>
+                <input type="checkbox" name="userFriendly" value="yes">
+                Ease of Use
+            </label>
+
+            <label>
+                <input type="checkbox" name="performance" value="yes">
+                Performance
+            </label>
+
+            <label>
+                <input type="checkbox" name="design" value="yes">
+                Design
+            </label>
+        </fieldset>
+
+        <!-- Review & Name -->
+        <fieldset>
+            <label for="review">
+                Written Review <span>(optional)</span>
+            </label>
+            <textarea name="review" id="review"></textarea>
+
+            <label for="userName">
+                Your Name <span>(optional)</span>
+            </label>
+            <input type="text" id="userName" name="userName">
+        </fieldset>
+
+        <input type="submit" value="Post Review" id="postReviewBtn">
+
+    </form>
+</main>
+
+<footer>
+    <p>&copy;2025 • Dreiser Morales Chacón • Colombia</p>
+    <p id="date_update"></p>
+</footer>
+
+</body>
+</html>
