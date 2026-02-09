@@ -3,7 +3,6 @@
 /* =============================== */
 
 :root {
-    /* Colors */
     --primary-color: #1E63E9;
     --primary-dark: #154AB3;
 
@@ -19,19 +18,16 @@
     --success-color: #2E8B3A;
     --error-color: #C62828;
 
-    /* Spacing scale */
     --space-1: 0.25rem;
     --space-2: 0.5rem;
     --space-3: 1rem;
     --space-4: 1.5rem;
     --space-5: 2rem;
 
-    /* Border radius */
     --radius-sm: 6px;
     --radius-md: 8px;
     --radius-lg: 10px;
 
-    /* Shadows */
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -46,6 +42,10 @@
     margin: 0;
     padding: 0;
 }
+
+/* =============================== */
+/*              BODY               */
+/* =============================== */
 
 body {
     font-family: "Open Sans", Arial, sans-serif;
@@ -79,6 +79,7 @@ form {
     background: var(--card-background);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
+    margin: auto;
 }
 
 fieldset {
@@ -100,13 +101,21 @@ fieldset div {
     margin-bottom: var(--space-2);
 }
 
+/* =============================== */
+/*             LABELS              */
+/* =============================== */
+
 label {
-    display: block;
-    margin-bottom: var(--space-2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
     color: var(--text-light);
 }
 
-/* Inputs */
+/* =============================== */
+/*             INPUTS              */
+/* =============================== */
 
 input,
 select,
@@ -127,14 +136,20 @@ textarea {
     min-height: 120px;
 }
 
-#slct, 
+#slct,
 #slct2,
 #slct3,
-#slct4  {
+#slct4 {
     display: block;
 }
 
-/* Focus styles for accessibility */
+/* Checkboxes & radios inside labels */
+label input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+/* Focus styles */
 input:focus,
 select:focus,
 textarea:focus,
@@ -143,6 +158,22 @@ button:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 4px rgba(30, 99, 233, 0.3);
 }
+
+/* =============================== */
+/*        CHECKBOX ALIGNMENT       */
+/* =============================== */
+
+label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
 
 /* =============================== */
 /*            BUTTONS              */
@@ -189,6 +220,12 @@ button:hover {
     color: var(--star-color);
 }
 
+label .stars-inline {
+    display: flex;
+    gap: 4px;
+    font-size: 1.6rem;
+}
+
 /* =============================== */
 /*        SUCCESS / ERROR          */
 /* =============================== */
@@ -209,30 +246,6 @@ button:hover {
 .error-message {
     background: var(--error-color);
 }
-
-/* Make labels align input + text nicely */
-label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* space between input and text */
-    margin-bottom: 0.5rem;
-    color: var(--text-light);
-}
-
-/* Inputs inside labels shouldn't stretch to 100% */
-label input[type="checkbox"],
-label input[type="radio"] {
-    width: auto;
-    margin: 0; /* remove extra bottom margin */
-}
-
-/* Fix stars spacing when inside labels */
-label .stars-inline {
-    display: flex;
-    gap: 4px;
-    font-size: 1.6rem;
-}
-
 
 /* =============================== */
 /*        RESPONSIVE DESIGN        */
