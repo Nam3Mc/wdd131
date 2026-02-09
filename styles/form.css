@@ -79,7 +79,6 @@ form {
     background: var(--card-background);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
-    margin: auto;
 }
 
 fieldset {
@@ -87,7 +86,7 @@ fieldset {
     padding: var(--space-3);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    background: #fff;
+    background: var(--card-background);
 }
 
 fieldset legend {
@@ -126,7 +125,7 @@ textarea {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     font-size: 1rem;
-    background: #fff;
+    background: var(--card-background);
     color: var(--text-color);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -143,8 +142,9 @@ textarea {
     display: block;
 }
 
-/* Checkboxes & radios inside labels */
-label input[type="radio"] {
+/* Radios & checkboxes */
+label input[type="radio"],
+label input[type="checkbox"] {
     width: auto;
     margin: 0;
 }
@@ -158,22 +158,6 @@ button:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 4px rgba(30, 99, 233, 0.3);
 }
-
-/* =============================== */
-/*        CHECKBOX ALIGNMENT       */
-/* =============================== */
-
-label input[type="checkbox"] {
-    width: auto;
-    margin: 0;
-}
-
-label {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
 
 /* =============================== */
 /*            BUTTONS              */
