@@ -44,30 +44,6 @@
 }
 
 /* =============================== */
-/*              BODY               */
-/* =============================== */
-
-body {
-    font-family: "Open Sans", Arial, sans-serif;
-    background: var(--background-color);
-    color: var(--text-color);
-}
-
-/* =============================== */
-/*             HEADER              */
-/* =============================== */
-
-header {
-    padding: var(--space-5) var(--space-3);
-    background: var(--primary-color);
-    color: white;
-}
-
-header h1 {
-    margin: 0;
-}
-
-/* =============================== */
 /*              FORM               */
 /* =============================== */
 
