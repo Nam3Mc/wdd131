@@ -1,0 +1,228 @@
+/* Specific Styles for Checkout Page */
+
+.checkout-page {
+    padding: 40px 20px;
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.form-group-wrapper {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+.form-group-wrapper h3 {
+    margin-bottom: 20px;
+    color: var(--brand-red);
+    font-size: 1.2rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.form-grid input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-grid input:focus {
+    border-color: var(--brand-yellow);
+    outline: none;
+}
+
+/* Payment Options */
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Order Review (Right Column) */
+.order-review {
+    background: var(--chocolate);
+    color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    height: fit-content;
+}
+
+.order-review h3 {
+    color: var(--brand-yellow);
+    margin-bottom: 20px;
+}
+
+.order-totals {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total-line.final {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--brand-yellow);
+    margin-top: 10px;
+}
+
+.secure-note {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+/* Desktop Adjustment */
+@media screen and (min-width: 900px) {
+    .checkout-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: flex-start;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .full-width {
+        grid-column: span 2;
+    }
+}
+
+/* Delivery Method Styling */
+.delivery-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.delivery-radio {
+    border: 2px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Style when the radio inside is checked */
+.delivery-radio:has(input:checked) {
+    border-color: var(--brand-red);
+    background-color: rgba(196, 18, 23, 0.05);
+}
+
+.method-info strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--chocolate);
+}
+
+.method-info span {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* The Magic Class: Hides the address section */
+.hidden {
+    display: none !important;
+}
+
+.delivery-time-box {
+    background-color: #fdfae6; /* Light yellowish for warmth */
+    border-left: 4px solid var(--brand-yellow);
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.delivery-time-box strong {
+    color: var(--chocolate);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.success-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #28a745;
+    color: white;
+    font-size: 2rem;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.receipt-body {
+    text-align: left;
+    margin: 20px 0;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace; /* Makes it look like a receipt */
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}

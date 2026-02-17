@@ -10,7 +10,7 @@ Each product shows:
 
 Name
 
-Price
+Pricea
 
 Description
 

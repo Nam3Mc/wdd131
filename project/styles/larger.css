@@ -1,0 +1,102 @@
+@media screen and (min-width: 768px) {
+    
+    /* Nav Desktop */
+    #menu-toggle { display: none; }
+
+    .nav-menu {
+        display: flex !important;
+        position: static;
+        width: auto;
+        box-shadow: none;
+        background: none;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .nav-menu li a {
+        border: none;
+        padding: 5px 0;
+        transition: 0.3s;
+    }
+
+    .nav-menu li a:hover { color: var(--brand-red); }
+
+    /* Layout */
+    .hero-minimal { padding: 100px 0; }
+    .hero-minimal h1 { font-size: 3.5rem; }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 60px 0;
+    }
+
+    /* CARRUSEL DESKTOP (4 Columnas) */
+    .carousel-track {
+        grid-auto-columns: calc(25% - 15px); /* Ajuste preciso para 4 columnas */
+    }
+
+    .carousel-btn {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--brand-red);
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 10;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .prev { left: -25px; }
+    .next { right: -25px; }
+
+    /* Footer Desktop */
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cart-layout {
+        flex-direction: row; /* Dos columnas */
+        align-items: flex-start;
+    }
+
+    .cart-items {
+        flex: 2; /* La lista ocupa más espacio */
+    }
+
+    .cart-summary {
+        flex: 1; /* El resumen es más angosto */
+        position: sticky;
+        top: 100px;
+    }
+    
+    .cart-item {
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .cart-item img {
+        width: 120px;
+        height: 120px;
+    }
+    #menu-toggle {
+        display: none !important; /* ESCONDE el botón ≡ en pantallas grandes */
+    }
+
+    .nav-menu {
+        display: flex !important; /* MUESTRA el menú siempre en horizontal */
+        flex-direction: row;
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        background: none;
+    }
+}

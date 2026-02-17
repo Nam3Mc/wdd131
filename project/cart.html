@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart | Las Repollas del Abuelo</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/cart-logic.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-container">
+                <span class="brand-name">Las Repollas <br><span>del Abuelo</span></span>
+            </div>
+            <nav aria-label="Main Navigation">
+                <button id="menu-toggle" aria-label="Toggle Menu">≡</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html" class="active">Cart</a></li>
+                    <li><a href="review.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container cart-page">
+        <h1 class="section-title">Your Shopping Cart</h1>
+        
+        <div class="cart-layout">
+            <section class="cart-items" id="cart-items-container">
+                <div class="empty-cart-msg">
+                    <p>Your cart is currently empty.</p>
+                    <a href="index.html" class="cta-button">Browse Products</a>
+                </div>
+            </section>
+
+            <aside class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-details">
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Shipping Fee</span>
+                        <span id="shipping">$5.00</span>
+                    </div>
+                    <hr>
+                    <div class="summary-line total">
+                        <span>Total</span>
+                        <span id="final-total">$0.00</span>
+                    </div>
+                </div>
+
+                <button id="checkout-btn" class="cta-button checkout-wide" disabled>
+                    Proceed to Checkout
+                </button>
+
+                <div class="trust-signals">
+                    <div class="signal">
+                        <span>🔒</span> 100% Secure Payment
+                    </div>
+                    <div class="signal">
+                        <span>🚚</span> Guaranteed 24h Delivery
+                    </div>
+                    <div class="payment-methods">
+                        <small>We accept all major credit cards</small>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="images/logo.png" alt="Las Repollas Logo" width="60" height="60" loading="lazy">
+                <h3>Las Repollas <span>del Abuelo</span></h3>
+                <p>Handcrafted tradition baked with love from our family to yours.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">My Cart</a></li>
+                    <li><a href="review.html">Reviews</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>📍 123 Sweetness Street</p>
+                <p>📞 +1 234 567 890</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="Facebook">👤</a>
+                    <a href="#" aria-label="WhatsApp">💬</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentyear"></span> | Las Repollas del Abuelo | Designed by <strong>Dreiser Morales</strong></p>
+                <p class="last-mod">Last updated: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

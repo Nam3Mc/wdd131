@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Las Repollas del Abuelo</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/checkout.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-container">
+                <span class="brand-name">Las Repollas <br><span>del Abuelo</span></span>
+            </div>
+            <nav aria-label="Main Navigation">
+                <button id="menu-toggle" aria-label="Toggle Menu">≡</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="review.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container checkout-page">
+
+<div class="delivery-time-box">
+    <p id="estimated-time">🕒 Estimated delivery: <strong>Today, before 9:00 PM</strong></p>
+</div>
+        <h1 class="section-title">Checkout</h1>
+        
+        <form id="checkout-form" class="checkout-layout">
+            <section class="checkout-form-section">
+                
+                <div class="form-group-wrapper">
+                    <h3>Contact Information</h3>
+                    <div class="form-grid">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="form-group-wrapper">
+                    <h3>How do you want to receive your order?</h3>
+                    <div class="delivery-options">
+                        <label class="delivery-radio">
+                            <input type="radio" name="delivery-method" value="delivery" checked>
+                            <div class="method-info">
+                                <strong>Home Delivery</strong>
+                                <span>Flat rate: $5.00</span>
+                            </div>
+                        </label>
+                        <label class="delivery-radio">
+                            <input type="radio" name="delivery-method" value="pickup">
+                            <div class="method-info">
+                                <strong>Local Pickup</strong>
+                                <span>Free of charge</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="shipping-address-section" class="form-group-wrapper">
+                    <h3>Shipping Address</h3>
+                    <div class="form-grid">
+                        <input type="text" placeholder="Street Address" class="full-width" required>
+                        <input type="text" placeholder="Apartment, suite, etc. (optional)">
+                        <input type="text" placeholder="City" required>
+                        <input type="text" placeholder="Zip Code" required>
+                    </div>
+                </div>
+
+                <div class="form-group-wrapper">
+                    <h3>Payment Method</h3>
+                    <div class="payment-options">
+                        <label class="payment-radio">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span>Credit / Debit Card</span>
+                        </label>
+                        <label class="payment-radio">
+                            <input type="radio" name="payment" value="transfer">
+                            <span>Bank Transfer</span>
+                        </label>
+                    </div>
+
+                <h3>Order Notes (Optional)</h3>
+                <textarea id="order-notes" placeholder="Notes about your order, e.g. special delivery instructions or gift notes." rows="3" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;"></textarea>
+                </div>
+            </section>
+
+            <aside class="order-review">
+                <h3>Your Order</h3>
+                <div id="checkout-items-list">
+                    </div>
+                
+                <div class="order-totals">
+                    <div class="total-line">
+                        <span>Subtotal</span>
+                        <span id="check-subtotal">$0.00</span>
+                    </div>
+                    <div class="total-line">
+                        <span>Shipping</span>
+                        <span id="shipping-fee-display">$5.00</span>
+                    </div>
+                    <hr>
+                    <div class="total-line final">
+                        <span>Total to Pay</span>
+                        <span id="check-total">$0.00</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button checkout-wide">
+                    Place Order Now
+                </button>
+                <p class="secure-note">🔒 Your transaction is encrypted and secure.</p>
+            </aside>
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-bottom">
+            <p>&copy; <span id="currentyear"></span> | Las Repollas del Abuelo | Designed by <strong>Dreiser Morales</strong></p>
+            <p class="last-mod">Last updated: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <div id="receipt-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <div class="receipt-header">
+            <span class="success-icon">✔</span>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for choosing <strong>Las Repollas del Abuelo</strong></p>
+        </div>
+        
+        <div class="receipt-body">
+            <div id="receipt-details">
+                </div>
+            <hr>
+            <div class="receipt-totals">
+                <p>Total Paid: <strong id="receipt-total">$0.00</strong></p>
+                <p>Method: <span id="receipt-method">Delivery</span></p>
+            </div>
+        </div>
+
+        <button id="close-receipt" class="cta-button">Back to Home</button>
+    </div>
+</div>
+
+</body>
+</html>
