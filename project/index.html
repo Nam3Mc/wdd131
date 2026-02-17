@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Las Repollas del Abuelo | Homemade Tradition</title>
-    <meta name="description" content="Authentic homemade repollas. Traditional recipes baked with love.">
     
+    <title>Las Repollas del Abuelo | Homemade Artisan Pastries</title>
+    <meta name="description" content="Discover the authentic taste of Las Repollas del Abuelo. Traditional homemade pastries baked with organic ingredients and a century-old family recipe.">
+    <meta name="author" content="Dreiser Morales">
+    
+    <meta property="og:title" content="Las Repollas del Abuelo | Homemade Tradition">
+    <meta property="og:description" content="Artisan pastries baked with love. Try our salted caramel and pistachio specialties.">
+    <meta property="og:image" content="images/hero-preview.jpg"> <meta property="og:url" content="https://tu-usuario.github.io/wdd131/project/index.html">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,30 +23,24 @@
     <script src="scripts/products.js" defer></script>
 </head>
 <body>
-
     <header class="main-header">
         <div class="container header-flex">
             <div class="logo-container">
-                <img src="images/logo.png" alt="Las Repollas Logo" width="80" height="80">
                 <span class="brand-name">Las Repollas <br><span>del Abuelo</span></span>
             </div>
-
             <nav aria-label="Main Navigation">
-                <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
-                    <span class="hamburger"></span>
-                </button>
+                <button id="menu-toggle" aria-label="Toggle Menu">≡</button>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="review.html">Reviews</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
         <section class="hero-minimal">
-            <div class="container">
+            <div class="hero-overlay"></div> <div class="container hero-content">
                 <h1>Tradition in Every Bite</h1>
                 <p>Handmade artisan repollas delivered straight to your door.</p>
                 <a href="#product-list" class="cta-button">Shop Now</a>
@@ -49,14 +49,11 @@
 
         <section id="product-list" class="products container">
             <h2 class="section-title">Our Selection</h2>
-
             <div class="carousel-container">
-                <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">‹</button>
-
+                <button class="carousel-btn prev" id="prevBtn" aria-label="Previous Item">‹</button>
                 <div id="product-grid" class="grid-layout carousel-track">
                     </div>
-                
-                <button class="carousel-btn next" id="nextBtn" aria-label="Next">›</button>
+                <button class="carousel-btn next" id="nextBtn" aria-label="Next Item">›</button>
             </div>
         </section>
 
@@ -64,7 +61,6 @@
             <div class="container">
                 <h2 class="section-title">What Our Customers Say</h2>
             </div>
-
             <div class="reviews-wrapper">
                 <div class="reviews-track" id="reviews-track">
                     </div>
@@ -73,22 +69,21 @@
 
         <section class="features container">
             <div class="feature-item">
-                <span class="icon">🌾</span>
+                <span class="icon" aria-hidden="true">🌾</span>
                 <h3>Organic Ingredients</h3>
                 <p>We use stone-ground flour and farm-fresh eggs for the perfect dough.</p>
             </div>
             <div class="feature-item">
-                <span class="icon">👨‍🍳</span>
+                <span class="icon" aria-hidden="true">👨‍🍳</span>
                 <h3>Century-Old Recipe</h3>
                 <p>We preserve the traditional techniques perfected by "Abuelo" in his youth.</p>
             </div>
             <div class="feature-item">
-                <span class="icon">🛵</span>
+                <span class="icon" aria-hidden="true">🛵</span>
                 <h3>Freshly Baked</h3>
                 <p>We don't stock up. Your order is baked specifically for you just before delivery.</p>
             </div>
         </section>
-
     </main>
 
     <footer class="main-footer">
@@ -124,6 +119,9 @@
         <div class="footer-bottom">
             <div class="container">
                 <p>&copy; <span id="currentyear"></span> | Las Repollas del Abuelo | Designed by <strong>Dreiser Morales</strong></p>
+                
+                <p><a href="references.html" id="ref-link">References & Credits</a></p>
+                
                 <p class="last-mod">Last updated: <span id="lastModified"></span></p>
             </div>
         </div>

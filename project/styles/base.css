@@ -358,3 +358,97 @@ body {
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
+
+.hero-minimal {
+    position: relative;
+    /* Reemplaza 'hero-bg.jpg' con el nombre de la imagen que descargaste */
+    background-image: url('/images/project/hero.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px; /* Altura del hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Capa oscura para que el texto blanco resalte */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% de oscuridad */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté sobre la capa oscura */
+}
+
+.hero-minimal h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-minimal p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Ajuste del contenedor principal del header */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+/* 1. Logo a la izquierda y Redondo */
+.logo-wrapper {
+    flex: 1; /* Ocupa espacio a la izquierda */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-round {
+    width: 70px;  /* Ajusta el tamaño según prefieras */
+    height: 70px;
+    border-radius: 50%; /* Esto lo hace redondo */
+    object-fit: cover;
+    border: 2px solid #daa520; /* Un borde dorado opcional para que resalte */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 2. Nombre de la marca en el centro */
+.brand-container {
+    flex: 2; /* Ocupa más espacio central */
+    text-align: center;
+}
+
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    color: #4a3728; /* Color chocolate oscuro */
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.brand-name span {
+    font-size: 1rem;
+    color: #daa520; /* Color dorado */
+    letter-spacing: 2px;
+}
+
+/* 3. Navegación a la derecha */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
