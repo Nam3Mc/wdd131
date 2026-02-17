@@ -817,7 +817,7 @@ body {
 .hero-minimal {
     position: relative;
     /* Reemplaza 'hero-bg.jpg' con el nombre de la imagen que descargaste */
-    background-image: url('../images/project/hero.webp'); 
+    background-image: url('../../images/project/hero.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
