@@ -1,10 +1,16 @@
+/* ==========================================
+   MEDIA QUERY UNIFICADA (Escritorio - 768px+)
+   ========================================== */
 @media screen and (min-width: 768px) {
     
-    /* Nav Desktop */
-    #menu-toggle { display: none; }
+    /* --- Navegación Desktop --- */
+    #menu-toggle { 
+        display: none !important; 
+    }
 
     .nav-menu {
         display: flex !important;
+        flex-direction: row !important;
         position: static;
         width: auto;
         box-shadow: none;
@@ -19,20 +25,27 @@
         transition: 0.3s;
     }
 
-    .nav-menu li a:hover { color: var(--brand-red); }
+    .nav-menu li a:hover { 
+        color: var(--brand-red); 
+    }
 
-    /* Layout */
-    .hero-minimal { padding: 100px 0; }
-    .hero-minimal h1 { font-size: 3.5rem; }
+    /* --- Hero & Layout --- */
+    .hero-minimal { 
+        padding: 100px 0; 
+    }
+
+    .hero-minimal h1 { 
+        font-size: 3.5rem; 
+    }
 
     .features {
         grid-template-columns: repeat(3, 1fr);
         padding: 60px 0;
     }
 
-    /* CARRUSEL DESKTOP (4 Columnas) */
+    /* --- Carrusel Desktop (4 Columnas) --- */
     .carousel-track {
-        grid-auto-columns: calc(25% - 15px); /* Ajuste preciso para 4 columnas */
+        grid-auto-columns: calc(25% - 15px); /* 4 productos por vista */
     }
 
     .carousel-btn {
@@ -56,26 +69,40 @@
     .prev { left: -25px; }
     .next { right: -25px; }
 
-    /* Footer Desktop */
+    /* --- Footer Desktop (Ajuste de Logo) --- */
     .footer-grid {
         grid-template-columns: 1.5fr 1fr 1fr;
+        align-items: start;
+        text-align: left; /* Alineación más profesional en PC */
     }
-}
 
-@media screen and (min-width: 768px) {
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Logo a la izquierda en PC */
+    }
+
+    .footer-brand .logo-round {
+        margin: 0 0 15px 0; /* Quita el centrado automático de móvil */
+        width: 80px;
+        height: 80px;
+    }
+
+    /* --- Página de Carrito Desktop --- */
     .cart-layout {
-        flex-direction: row; /* Dos columnas */
+        flex-direction: row; /* Diseño de dos columnas */
         align-items: flex-start;
+        gap: 40px;
     }
 
     .cart-items {
-        flex: 2; /* La lista ocupa más espacio */
+        flex: 2; /* Área de productos más ancha */
     }
 
     .cart-summary {
-        flex: 1; /* El resumen es más angosto */
+        flex: 1; /* Resumen más estrecho lateral */
         position: sticky;
-        top: 100px;
+        top: 100px; /* Se queda fijo al hacer scroll */
     }
     
     .cart-item {
@@ -86,17 +113,5 @@
     .cart-item img {
         width: 120px;
         height: 120px;
-    }
-    #menu-toggle {
-        display: none !important; /* ESCONDE el botón ≡ en pantallas grandes */
-    }
-
-    .nav-menu {
-        display: flex !important; /* MUESTRA el menú siempre en horizontal */
-        flex-direction: row;
-        position: static;
-        box-shadow: none;
-        padding: 0;
-        background: none;
     }
 }

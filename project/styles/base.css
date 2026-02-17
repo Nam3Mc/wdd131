@@ -362,7 +362,7 @@ body {
 .hero-minimal {
     position: relative;
     /* Reemplaza 'hero-bg.jpg' con el nombre de la imagen que descargaste */
-    background-image: url('/images/project/hero.png'); 
+    background-image: url('/images/project/hero.webp'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -451,4 +451,481 @@ nav {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+}
+
+:root {
+    --brand-yellow: #FFD541;
+    --brand-red: #C41217;
+    --chocolate: #4A2B0F;
+    --bg-light: #FAFAFA;
+    --white: #FFFFFF;
+    --font-main: 'Poppins', sans-serif;
+}
+
+/* 1. Reset Global */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--chocolate);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Header & Nav (Móvil) */
+.main-header {
+    background: var(--brand-yellow);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name {
+    font-weight: 700;
+    line-height: 1;
+    color: var(--brand-red);
+    font-size: 1.2rem;
+}
+
+/* Estilos para el botón del menú en Mobile */
+#menu-toggle {
+    display: block; /* Se muestra en móviles */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--chocolate);
+    cursor: pointer;
+    z-index: 1001; /* Por encima del menú desplegable */
+}
+
+/* Escondemos el menú normal en mobile para usar el sistema de clase .open */
+.nav-menu {
+    display: none; /* Se oculta por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Ajusta según el alto de tu header */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.nav-menu.open {
+    display: flex; /* Se muestra cuando haces click */
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: var(--chocolate);
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+}
+
+/* 3. Hero & Features */
+.hero-minimal {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--white);
+}
+
+.hero-minimal h1 { font-size: 2.2rem; margin-bottom: 10px; }
+
+.cta-button {
+    display: inline-block;
+    background: var(--brand-red);
+    color: var(--white);
+    padding: 12px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 20px;
+    text-align: center;
+    background: var(--white);
+}
+
+.feature-item .icon { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+
+/* 4. CARRUSEL DE PRODUCTOS (Corregido) */
+.carousel-container {
+    position: relative;
+    padding: 0 10px;
+}
+
+.carousel-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 85%; /* En móvil se ve 1 y un pedacito del otro */
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.product-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    scroll-snap-align: center;
+    transition: 0.3s;
+}
+
+.image-wrapper { height: 180px; position: relative; }
+.image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
+.category-tag {
+    position: absolute;
+    top: 10px; left: 10px;
+    background: var(--brand-yellow);
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.product-info { padding: 1.5rem; }
+.price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.price { font-weight: 700; font-size: 1.3rem; color: var(--brand-red); }
+
+.add-to-cart {
+    background: var(--chocolate);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.carousel-btn { display: none; } /* Ocultos en móvil */
+
+/* 5. REVIEWS INFINITAS */
+.reviews-section { padding: 50px 0; overflow: hidden; }
+.reviews-wrapper { 
+    display: flex; 
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); 
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); 
+}
+.reviews-track { 
+    display: flex; 
+    gap: 20px; 
+    animation: scroll-infinite 40s linear infinite; 
+    width: max-content;
+}
+
+.review-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+@keyframes scroll-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* 6. FOOTER */
+.main-footer { background: var(--chocolate); color: var(--white); padding: 50px 0 20px; }
+.footer-grid { display: grid; gap: 40px; }
+.footer-brand h3 { color: var(--brand-yellow); margin-bottom: 10px; }
+.footer-links ul { list-style: none; }
+.footer-links a { color: var(--white); text-decoration: none; opacity: 0.7; }
+.social-icons { display: flex; gap: 20px; font-size: 1.5rem; margin-top: 15px; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; font-size: 0.8rem; }
+
+#menu-toggle {
+    background: none;
+    border: none;
+    font-size: 2.5rem; 
+    color: var(--chocolate);
+    cursor: pointer;
+    min-width: 44px; /* Asegura el toque en móvil */
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Cart Page Styles --- */
+.cart-page { padding: 40px 20px; }
+
+.cart-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-details { flex: 1; }
+.item-details h4 { font-size: 1rem; margin-bottom: 5px; }
+.item-price { color: var(--brand-red); font-weight: 700; }
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.qty-btn {
+    background: #eee;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Summary Section */
+.cart-summary {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    height: fit-content;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.summary-line.total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--chocolate);
+}
+
+.checkout-wide {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.checkout-wide:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* --- Detalles de Pulido para el Carrito --- */
+
+/* 1. Empty State con Estilo */
+.empty-cart-msg {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--white);
+    border-radius: 20px;
+    border: 2px dashed #ddd;
+}
+
+.empty-cart-msg p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #999;
+}
+
+/* 2. Micro-interacciones en los ítems */
+.cart-item {
+    transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+    border-color: var(--brand-yellow);
+    transform: translateX(5px);
+}
+
+/* 3. Estilo de los botones de cantidad */
+.quantity-controls {
+    background: #f1f1f1;
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.qty-btn {
+    background: var(--white) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.qty-btn:hover {
+    background: var(--brand-yellow) !important;
+}
+
+/* 4. Resumen de pedido "Sticky" mejorado */
+.cart-summary h3 {
+    border-bottom: 2px solid var(--brand-yellow);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.hero-minimal {
+    position: relative;
+    /* Reemplaza 'hero-bg.jpg' con el nombre de la imagen que descargaste */
+    background-image: url('/images/project/hero.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px; /* Altura del hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Capa oscura para que el texto blanco resalte */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% de oscuridad */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté sobre la capa oscura */
+}
+
+.hero-minimal h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-minimal p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Ajuste del contenedor principal del header */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+/* 1. Logo a la izquierda y Redondo */
+.logo-wrapper {
+    flex: 1; /* Ocupa espacio a la izquierda */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-round {
+    width: 70px;  /* Ajusta el tamaño según prefieras */
+    height: 70px;
+    border-radius: 50%; /* Esto lo hace redondo */
+    object-fit: cover;
+    border: 2px solid #daa520; /* Un borde dorado opcional para que resalte */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 2. Nombre de la marca en el centro */
+.brand-container {
+    flex: 2; /* Ocupa más espacio central */
+    text-align: center;
+}
+
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    color: #4a3728; /* Color chocolate oscuro */
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.brand-name span {
+    font-size: 1rem;
+    color: #daa520; /* Color dorado */
+    letter-spacing: 2px;
+}
+
+/* 3. Navegación a la derecha */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Aseguramos que el logo sea redondo y visible en el footer */
+.footer-brand .logo-round {
+    width: 80px;  /* Un poco más grande para el footer */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--brand-yellow); /* El dorado resalta sobre el chocolate */
+    margin: 0 auto 15px; /* Lo centra y le da espacio abajo */
+    display: block;
+    background-color: var(--white); /* Por si la imagen tiene transparencia */
+}
+
+.footer-brand {
+    text-align: center; /* Centra el logo, el h3 y el p */
+}
+
+.footer-brand h3 span {
+    display: block; /* Pone "del Abuelo" en una línea nueva si prefieres */
+    font-size: 0.9rem;
+    color: var(--brand-yellow);
 }
